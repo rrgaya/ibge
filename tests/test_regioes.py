@@ -14,9 +14,8 @@ def region_data():
     ]
 
 
-def test_deve_retornar_200(region_data):
-    region = Regioes()
-    expect = region_data
-    result = region.json()
-
-    assert expect == result
+def test_deve_retornar_o_json_contendo_todas_as_regios_cadastradas_no_ibge(region_data):
+    regiao = Regioes()
+    esperado = region_data
+    resultado = regiao.json()
+    assert esperado == resultado
